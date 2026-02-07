@@ -95,3 +95,21 @@ var maxArea = function(height) {
     }
     return ans
 };
+
+//MOVE ZEROES
+//Input: nums = [0,1,0,3,12]
+//Output: [1,3,12,0,0]
+
+var moveZeroes = function(nums){
+    let i = 0 , j = 0 
+    while(i < nums.length){
+        if(i != 0){
+            let temp = nums[i]
+            nums[i] = nums[j]
+            nums[j] = temp
+
+            j++
+        }
+        i++
+    }
+}
