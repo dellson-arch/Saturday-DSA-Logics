@@ -62,3 +62,22 @@ var maxSubArray = function(nums){
     }
     return maxSum
 }
+
+//CONTAINS DUPLICATE
+//Input: nums = [1,2,3,1]
+//Output: true
+//Explanation: The element 1 occurs at the indices 0 and 3.
+
+var containsDuplicate = function(nums) {
+    const map = new Map()
+
+    for(let i = 0 ; i < nums.length ; i++){
+        let count = map.get(nums[i]) || 0
+        count++
+
+        if(count > 1){
+            return true
+        }
+    }
+    return false
+}
