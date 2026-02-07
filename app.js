@@ -81,3 +81,17 @@ var containsDuplicate = function(nums) {
     }
     return false
 }
+
+//CONTAINER WITH MOST WATER 
+
+var maxArea = function(height) {
+    let ans = 0 , i = 0 , j = height.length - 1 //why extra variable ans because we have to Return the maximum amount of water a container can store.
+
+    while(i < j){
+        ans = Math.max(ans , Math.min(height[i] , height[j]) * (j - i))
+
+        if(height[i] < height[j]) i++
+        else j--
+    }
+    return ans
+};
