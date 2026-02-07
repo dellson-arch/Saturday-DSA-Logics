@@ -7,3 +7,5 @@
 //CONTAINS DUPLICATE : now ab tumko kaise pata chalega koi element do baar aaya hai ki nii uska hisab rakhne ke liye use Map That's it .
 
 //first you make a variable name ans jisme initially 0 rahega . i and j in dono me length consider karunga minimum wali kyu ki pani toh chote tak ka aa sakti hai and breadth kaise nikaloge just subtract the higher index from lower index . toh ab apne paas length bhi hai breadth bhi hai now length * breadth = Area .idhar two pointers lagayenge jisme i element 0 se start hoga and j last element se and aap humesa compare karoge kon sa element chota hai jo bhi chota hai usko aage badha doge . ab ans me update karoge max of last time (ans and Area of that water) me se jo bhi bada hai , kab tak chalna hai jabtak dono ke dono barabar nii ho jate 
+
+// MOVE ZEROES : two pointers i and j where i Moves through every element asks “Is this zero or non-zero?”. What j does Moves only when a non-zero 
