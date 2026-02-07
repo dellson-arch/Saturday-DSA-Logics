@@ -113,3 +113,29 @@ var moveZeroes = function(nums){
         i++
     }
 }
+
+//MERGE SORTED ARRAY 
+//Input: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
+//Output: [1,2,2,3,5,6]
+var merge = function(nums1, m, nums2, n){
+    let newArr = new Array(m+n)
+
+    let i = 0 , j = 0 , k = 0
+    while(i < m && j < n){
+        if(nums1[i] < nums2[j]){
+          newArr[k++] = nums1[i++]
+        } else{
+           newArr[k++] = nums2[j++]
+        }
+    }
+    while(i < m){
+        newArr[k++] = nums1[i++]
+    }
+     while(j < n){
+        newArr[k++] = nums2[j++]
+    }
+    
+    for(let i = 0 ; i< m+n ; i++){
+        nums1[x] = newArr[x]
+    }
+}
