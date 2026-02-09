@@ -139,3 +139,39 @@ var merge = function(nums1, m, nums2, n){
         nums1[x] = newArr[x]
     }
 }
+
+//3SUM : Notice that the solution set must not contain duplicate triplets.
+//Input: nums = [-1,0,1,2,-1,-4]
+//Output: [[-1,-1,2],[-1,0,1]]
+
+let nums = [-1,0,1,2,-1,-4]
+let ans = []
+nums.sort = ((a,b)=>a-b)
+for(let i = 0 ; i<nums.length ; i++){
+   if(i != 0 && nums[i-1] === nums[i]) continue
+   let j = i+1 , k = nums.length - 1 
+   while(j < k){
+     let sum = nums[i] + nums[j] + nums[k]
+     if(sum === 0){
+       let temp = [nums[i] , nums[j++] , nums[k--]]
+       ans.push(temp)
+     while(j < k && nums[j-1] === nums[j]) j++
+     while (j < k && nums[k+1] === nums[k])k--
+     }else if(sum < 0){
+        j++
+     }else{
+        k--
+     }
+   }
+}
+
+//let say mere ko continue use nahi karna waise. What does continue do?  continue current loop ke bache hue code ko skip kar deta hai aur seedha next iteration pe chala jaata hai. example let say for ka loop hai 0 se 5 tak chalna hai agar i === 2 aaye then continue toh 0,1,3,4,5 hoga . ok ab agar mere ko i++ use karna hai instead of continue then
+
+for (let i = 0; i < nums.length; i++) {
+  while (i > 0 && i < nums.length && nums[i] === nums[i - 1]) {
+    i++;
+  }
+
+  let j = i + 1;
+  let k = nums.length - 1;
+}
